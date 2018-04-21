@@ -13,6 +13,8 @@ import {AlertService, AuthenticationService, UserService} from "./_services";
 import {AuthGuard} from "./_guards";
 import {AlertComponent} from "./_directives";
 import {routing} from "./app.routing";
+import { ProfilComponent } from './profil/profil.component';
+import { IndexComponent } from './index/index.component';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import {routing} from "./app.routing";
     RegisterComponent,
     NavbarComponent,
     AlertComponent,
+    ProfilComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,

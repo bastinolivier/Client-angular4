@@ -4,12 +4,18 @@ import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { AuthGuard } from './_guards/index';
+import {ProfilComponent} from "./profil/profil.component";
+import {IndexComponent} from "./index/index.component";
 
 const appRoutes: Routes = [
     {
       path: '',
-      component: HomeComponent,
+      component: IndexComponent,
       canActivate: [AuthGuard]
+    },
+    {
+      path: 'home',
+      component: HomeComponent
     },
     {
       path: 'login',
@@ -17,6 +23,9 @@ const appRoutes: Routes = [
     },
     { path: 'register',
       component: RegisterComponent
+    },
+    { path: 'profil',
+      component: ProfilComponent
     },
 
     // otherwise redirect to home

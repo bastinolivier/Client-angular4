@@ -2,10 +2,18 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
+import {Subject} from "rxjs/Subject";
 
 @Injectable()
 export class AuthenticationService {
-    constructor(private http: HttpClient) { }
+  private loggedIn: Subject<boolean> = new Subject<boolean>();
+
+  get isLoggedIn() {
+    return this.loggedIn.asObservable();
+  }
+    constructor(private http: HttpClient) {
+      // this.loggedIn.next(this._sessionService.isSetUserSession())
+    }
 
     login(username: string, password: string) {
         return this.http.post<any>('/api/authenticate', { username: username, password: password })
