@@ -1,21 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
-import {fakeBackendProvider, JwtInterceptor} from "./_helpers";
-import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import {AlertService, AuthenticationService, UserService} from "./_services";
-import {AuthGuard} from "./_guards";
-import {AlertComponent} from "./_directives";
-import {routing} from "./app.routing";
+import {fakeBackendProvider, JwtInterceptor} from './_helpers';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {AlertService, AuthenticationService, UserService} from './_services';
+import {AuthGuard} from './_guards';
+import {AlertComponent} from './_directives';
+import {routing} from './app.routing';
 import { ProfilComponent } from './profil/profil.component';
-import { IndexComponent } from './index/index.component';
-
 
 @NgModule({
   declarations: [
@@ -26,7 +23,6 @@ import { IndexComponent } from './index/index.component';
     NavbarComponent,
     AlertComponent,
     ProfilComponent,
-    IndexComponent,
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,

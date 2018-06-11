@@ -5,12 +5,11 @@ import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { AuthGuard } from './_guards/index';
 import {ProfilComponent} from "./profil/profil.component";
-import {IndexComponent} from "./index/index.component";
 
 const appRoutes: Routes = [
     {
       path: '',
-      component: IndexComponent,
+      component: HomeComponent,
       canActivate: [AuthGuard]
     },
     {
